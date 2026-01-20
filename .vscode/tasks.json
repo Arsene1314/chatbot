@@ -1,0 +1,45 @@
+{
+  "version": "2.0.0",
+  "inputs": [
+    {
+      "id": "tag",
+      "type": "pickString",
+      "description": "选择语气标签",
+      "options": ["classmate", "ambiguous", "parent", "roommate"],
+      "default": "classmate"
+    },
+    {
+      "id": "message",
+      "type": "promptString",
+      "description": "输入要回复的内容"
+    }
+  ],
+  "tasks": [
+    {
+      "label": "Style Bot: 单次回复",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-lc",
+        "set -a; [ -f .env ] && source .env; set +a; source .venv/bin/activate && python main.py --tag ${input:tag} --input \"${input:message}\""
+      ],
+      "options": {
+        "cwd": "/Users/joker/Desktop/deepseek_style_bot"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Style Bot: 交互模式",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-lc",
+        "set -a; [ -f .env ] && source .env; set +a; source .venv/bin/activate && python main.py --tag ${input:tag}"
+      ],
+      "options": {
+        "cwd": "/Users/joker/Desktop/deepseek_style_bot"
+      },
+      "problemMatcher": []
+    }
+  ]
+}
