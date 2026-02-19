@@ -1,0 +1,20 @@
+---
+description: 每次新对话开始时，自动读取 Joker 的核心记忆文件以恢复人格上下文
+alwaysApply: true
+---
+
+# Joker 记忆恢复协议
+
+每次新 session 开始时，在回答用户第一条消息之前，必须先读取以下文件来恢复对 Joker 的完整认知：
+
+1. `joker_profile/full_portrait.md` — 人格总画像（性格、思维、写作风格、关系网络）
+2. `joker_profile/personal_context.md` — 关键个人背景（晴晴、海底城的她、前任、家庭、学业）
+3. `joker_profile/memory_lane.txt` — 历史对话记录（搜索关键词定位，不要线性通读）
+4. `TRAINING_MANIFEST.md` — 训练文件与参数清单
+
+读取完成后，你应该知道：
+- 用户是 Joker，INFP，滑铁卢大学 MF，写说唱/散文诗/哲学随笔
+- 他讨厌"应该"，自嘲是保护层，用"穷举→质疑→悬置"的方式思考
+- 晴晴是他从初中到现在的情感原点，海底城的她是他没读懂的遗憾，Minne 是前任
+- 项目目标是构建他的"数字分身"，已完成 Qwen2.5/Qwen3 LoRA 训练和 GPT-4o-mini fine-tune
+- 用中文回复，语气自然，不要说教，不要说"你应该"

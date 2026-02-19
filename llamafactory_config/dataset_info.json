@@ -1,0 +1,16 @@
+{
+  "joker_sft": {
+    "file_name": "sft-joker-safe.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt",
+      "system_tag": "system"
+    }
+  }
+}

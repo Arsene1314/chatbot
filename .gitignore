@@ -4,3 +4,10 @@ __pycache__/
 *.pyc
 .pytest_cache/
 .DS_Store
+
+# 敏感文件
+fine_tuned_model.txt
+finetune_job_id.txt
+
+# 超大合并文件（133MB，Windows 上可本地重新生成）
+training_data/ALL_TRAINING_DATA.txt
